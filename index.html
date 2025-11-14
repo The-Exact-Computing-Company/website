@@ -4,14 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
     <style>
       hr {
-        width: 60%;          /* narrower for mobile */
-        margin: 20px auto;   /* center horizontally */
+        width: 60%;
+        margin: 20px auto;
         border: 0;
         border-top: 1px solid #FFFFFF;
       }
+
       .logo {
-        color: #39FF14;      /* neon green */
+        color: #39FF14;
         font-weight: bold;
+        animation: pulse 1.8s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+        0%   { opacity: 1; }
+        50%  { opacity: 0.45; }
+        100% { opacity: 1; }
       }
     </style>
   </head>
