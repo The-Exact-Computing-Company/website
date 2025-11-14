@@ -2,12 +2,30 @@
   <head>
     <title>Exact Computing — coming soon</title>
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+      body {
+        font-family: "Courier New", monospace;
+        font-size: 5vw;              /* scales text automatically on mobile */
+        text-align: center;
+      }
+
+      pre {
+        font-size: 6vw;              /* larger for the main banner */
+        line-height: 1.2em;
+        white-space: pre-wrap;       /* wraps gracefully on tiny screens */
+      }
+
       hr {
-        width: 60%;
+        width: 70%;
         margin: 20px auto;
         border: 0;
         border-top: 1px solid #FFFFFF;
+      }
+
+      .smalltext {
+        font-size: 4.2vw;            /* readable but smaller for body */
       }
 
       .logo {
@@ -21,33 +39,36 @@
         50%  { opacity: 0.45; }
         100% { opacity: 1; }
       }
+
+      /* Prevent smallest phones from becoming absurdly large */
+      @media (min-width: 700px) {
+        body     { font-size: 22px; }
+        pre      { font-size: 26px; }
+        .smalltext { font-size: 18px; }
+      }
     </style>
   </head>
 
   <body bgcolor="#000000" text="#FFFFFF" link="#33FFFF" vlink="#33FFFF" alink="#FFFF33">
 
-    <center><pre>
-      The Exact Computing Company <span class="logo">[■]↺</span>
-    </pre></center>
+    <pre>
+The Exact Computing Company <span class="logo">[■]↺</span>
+    </pre>
 
     <hr>
 
-    <center>
-      <tt>
-        R and Python packages for reproducible data science.<br>
-        Easy real-time pair programming on reproducible environments.<br>
-        Coming soon.
-      </tt>
-    </center>
+    <div class="smalltext">
+      R and Python packages for reproducible data science.<br>
+      Easy real-time pair programming on reproducible environments.<br>
+      Coming soon.
+    </div>
 
     <hr>
 
-    <center>
-      <tt>
-        Powered by Nix &amp; standard Unix tools.<br>
-        &copy; 2025 The Exact Computing Company <span class="logo">[■]↺</span>
-      </tt>
-    </center>
+    <div class="smalltext">
+      Powered by Nix &amp; standard Unix tools.<br>
+      &copy; 2025 The Exact Computing Company <span class="logo">[■]↺</span>
+    </div>
 
   </body>
 </html>
