@@ -1,31 +1,24 @@
 <html>
   <head>
     <title>Exact Computing — coming soon</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
 
     <style>
       body {
+        background: #000;
+        color: #FFF;
         font-family: "Courier New", monospace;
-        font-size: 5vw;              /* scales text automatically on mobile */
         text-align: center;
-      }
-
-      pre {
-        font-size: 6vw;              /* larger for the main banner */
-        line-height: 1.2em;
-        white-space: pre-wrap;       /* wraps gracefully on tiny screens */
+        margin: 0;
+        padding-top: 40px;
       }
 
       hr {
-        width: 70%;
+        width: 60%;
         margin: 20px auto;
         border: 0;
         border-top: 1px solid #FFFFFF;
-      }
-
-      .smalltext {
-        font-size: 4.2vw;            /* readable but smaller for body */
       }
 
       .logo {
@@ -34,38 +27,71 @@
         animation: pulse 1.8s infinite ease-in-out;
       }
 
+      /* --- Typewriter effect for multiple lines --- */
+
+      .typewriter-line {
+        display: block;
+        margin: 10px auto;
+        font-size: 4.5vw;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .15em solid #39FF14;
+        width: 0;
+      }
+
+      /* Line animations — staggered start times */
+      #l1 { animation: typing1 3s steps(50, end) 0s forwards, cursorBlink .8s step-end infinite; }
+      #l2 { animation: typing2 3s steps(50, end) 3.1s forwards, cursorBlink .8s step-end infinite; }
+      #l3 { animation: typing3 3s steps(50, end) 6.2s forwards, cursorBlink .8s step-end infinite; }
+
+      @keyframes typing1 { from { width: 0; } to { width: 100%; } }
+      @keyframes typing2 { from { width: 0; } to { width: 100%; } }
+      @keyframes typing3 { from { width: 0; } to { width: 100%; } }
+
+      @keyframes cursorBlink {
+        from, to { border-color: transparent; }
+        50%      { border-color: #39FF14; }
+      }
+
       @keyframes pulse {
         0%   { opacity: 1; }
         50%  { opacity: 0.45; }
         100% { opacity: 1; }
       }
 
-      /* Prevent smallest phones from becoming absurdly large */
+      /* Desktop cap */
       @media (min-width: 700px) {
-        body     { font-size: 22px; }
-        pre      { font-size: 26px; }
-        .smalltext { font-size: 18px; }
+        .typewriter-line { font-size: 18px; }
       }
     </style>
   </head>
 
-  <body bgcolor="#000000" text="#FFFFFF" link="#33FFFF" vlink="#33FFFF" alink="#FFFF33">
+  <body>
 
-    <pre>
+    <!-- STATIC HEADER -->
+    <pre style="font-size:6vw; margin:0;">
 The Exact Computing Company <span class="logo">[■]↺</span>
     </pre>
 
     <hr>
 
-    <div class="smalltext">
-      R and Python packages for reproducible data science.<br>
-      Easy real-time pair programming on reproducible environments.<br>
+    <!-- TYPEWRITER BODY TEXT -->
+    <div id="l1" class="typewriter-line">
+      R and Python packages for reproducible data science.
+    </div>
+
+    <div id="l2" class="typewriter-line">
+      Real-time pair programming on reproducible environments.
+    </div>
+
+    <div id="l3" class="typewriter-line">
       Coming soon.
     </div>
 
     <hr>
 
-    <div class="smalltext">
+    <!-- FOOTER (static) -->
+    <div style="font-size:4.2vw;">
       Powered by Nix &amp; standard Unix tools.<br>
       &copy; 2025 The Exact Computing Company <span class="logo">[■]↺</span>
     </div>
