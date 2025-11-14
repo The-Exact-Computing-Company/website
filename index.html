@@ -1,105 +1,74 @@
-<style>
-  body {
-    background: #000;
-    color: #FFF;
-    font-family: "Courier New", monospace;
-    text-align: center;
-    margin: 0;
-    padding-top: 40px;
-  }
+<html>
+  <head>
+    <title>Exact Computing — coming soon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  hr {
-    width: 60%;
-    margin: 20px auto;
-    border: 0;
-    border-top: 1px solid #FFFFFF;
-  }
+    <style>
+      body {
+        font-family: "Courier New", monospace;
+        font-size: 5vw;              /* scales text automatically on mobile */
+        text-align: center;
+      }
 
-  .logo {
-    color: #39FF14;
-    font-weight: bold;
-    animation: pulse 1.8s infinite ease-in-out;
-  }
+      pre {
+        font-size: 6vw;              /* larger for the main banner */
+        line-height: 1.2em;
+        white-space: pre-wrap;       /* wraps gracefully on tiny screens */
+      }
 
-  @keyframes pulse {
-    0%   { opacity: 1; }
-    50%  { opacity: 0.45; }
-    100% { opacity: 1; }
-  }
+      hr {
+        width: 70%;
+        margin: 20px auto;
+        border: 0;
+        border-top: 1px solid #FFFFFF;
+      }
 
-  /* ---------- TYPEWRITER FIX ---------- */
+      .smalltext {
+        font-size: 4.2vw;            /* readable but smaller for body */
+      }
 
-  .typewriter-line {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid #39FF14;
-    font-size: 4.6vw;
-  }
+      .logo {
+        color: #39FF14;
+        font-weight: bold;
+        animation: pulse 1.8s infinite ease-in-out;
+      }
 
-  /* Use character-based widths so animation always fits */
-  #l1 {
-    width: 0ch;
-    animation:
-      typing1 3s steps(60, end) forwards,
-      cursorBlink .8s step-end infinite;
-  }
-  #l2 {
-    width: 0ch;
-    animation:
-      typing2 3s steps(60, end) 3.1s forwards,
-      cursorBlink .8s step-end infinite;
-  }
-  #l3 {
-    width: 0ch;
-    animation:
-      typing3 2.4s steps(40, end) 6.2s forwards,
-      cursorBlink .8s step-end infinite;
-  }
+      @keyframes pulse {
+        0%   { opacity: 1; }
+        50%  { opacity: 0.45; }
+        100% { opacity: 1; }
+      }
 
-  @keyframes typing1 { from { width: 0ch; } to { width: 53ch; } }
-  @keyframes typing2 { from { width: 0ch; } to { width: 63ch; } }
-  @keyframes typing3 { from { width: 0ch; } to { width: 12ch; } }
+      /* Prevent smallest phones from becoming absurdly large */
+      @media (min-width: 700px) {
+        body     { font-size: 22px; }
+        pre      { font-size: 26px; }
+        .smalltext { font-size: 18px; }
+      }
+    </style>
+  </head>
 
-  @keyframes cursorBlink {
-    from, to { border-color: transparent; }
-    50%      { border-color: #39FF14; }
-  }
+  <body bgcolor="#000000" text="#FFFFFF" link="#33FFFF" vlink="#33FFFF" alink="#FFFF33">
 
-  /* Desktop cap */
-  @media (min-width: 700px) {
-    .typewriter-line { font-size: 18px; }
-  }
-</style>
-
-
-<!-- HEADER (static) -->
-<pre style="font-size:6vw; margin:0;">
+    <pre>
 The Exact Computing Company <span class="logo">[■]↺</span>
-</pre>
+    </pre>
 
-<hr>
+    <hr>
 
-<!-- TYPEWRITER LINES -->
-<div id="l1" class="typewriter-line">
-  R and Python packages for reproducible data science.
-</div>
+    <div class="smalltext">
+      R and Python packages for reproducible data science.<br>
+      Easy real-time pair programming on reproducible environments.<br>
+      Coming soon.
+    </div>
 
-<br>
+    <hr>
 
-<div id="l2" class="typewriter-line">
-  Real-time pair programming on reproducible environments.
-</div>
+    <div class="smalltext">
+      Powered by Nix &amp; standard Unix tools.<br>
+      &copy; 2025 The Exact Computing Company <span class="logo">[■]↺</span>
+    </div>
 
-<br>
-
-<div id="l3" class="typewriter-line">
-  Coming soon.
-</div>
-
-<hr>
-
-<div style="font-size:4.2vw;">
-  Powered by Nix &amp; standard Unix tools.<br>
-  &copy; 2025 The Exact Computing Company <span class="logo">[■]↺</span>
-</div>
+  </body>
+</html>
